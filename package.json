@@ -1,0 +1,31 @@
+{
+  "name": "typhoon",
+  "version": "1.0.0",
+  "description": "About typhoon relative events ",
+  "main": "index.html",
+  "dependencies": {},
+  "devDependencies": {
+    "grunt": "^0.4.5",
+    "grunt-contrib-compass": "^1.0.3",
+    "grunt-contrib-connect": "^0.11.2",
+    "grunt-contrib-jshint": "^0.11.2",
+    "grunt-contrib-uglify": "^0.9.1",
+    "grunt-contrib-watch": "^0.6.1"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dreamerhyde/typhoon.git"
+  },
+  "keywords": [
+    "typhoon"
+  ],
+  "author": "Albert Liu (dreamerhyde)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/dreamerhyde/typhoon/issues"
+  },
+  "homepage": "https://github.com/dreamerhyde/typhoon#readme"
+}

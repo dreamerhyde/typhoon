@@ -1,0 +1,38 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" ng-app="typhoon">
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+  <title>颱風災害動態</title>
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js" type="text/javascript" charset="utf-8"></script> -->
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.6/d3.min.js" charset="utf-8"></script> -->
+  <link rel="stylesheet" href="assets/stylesheets/css/main.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.3/angular.js" charset="utf-8"></script>
+  <script src="assets/js/main.js" type="text/javascript" charset="utf-8"></script>
+</head>
+<body>
+  <div id="main">
+    <dip id="gmap" ng-controller="gmap"></dip>
+    <div id="geoList" ng-controller="geoList">
+      <ul>
+        <li id="{{event.id}}" class="card {{event.CaseComplete}}" ng-repeat="event in events | orderBy:'order'" >
+          <div class="card-header">
+            <span ng-if="event.CaseComplete == 'true'" class="tag tatus true">已解決</span>
+            <span ng-if="event.CaseComplete == 'false'" class="tag status false">未解決</span>
+            <span class="tag location">{{event.CaseLocationDistrict}}</span>
+            <span class="tag pname">{{event.PName}}</span>
+          </div>
+          <div class="card-body">
+            <div class="card-title">{{event.Name}}</div>
+            <p class="des">說明：{{event.CaseDescription}}</p>
+            <div class="location">地區：{{event.CaseLocationDistrict}}</div>
+            <div class="caseTime">發生時間：{{event.CaseTime}}</div>
+            <!-- <div class="dpname">{{event.DPName}}</div> -->
+            <div class="pos">
+              經緯度：<span class="long">{{event.long}}</span>, <span class="lat">{{event.lat}}</span></div>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</body>
+</html>
